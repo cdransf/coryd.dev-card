@@ -1,0 +1,23 @@
+// colors
+$highlight:       #3da9fc;
+$white:           #fffffe;
+$text:            #101010;
+$textDark:          $white;
+$background:        $white;
+$backgroundDark:  #101010;
+
+// links
+$color-white-dark:  darken(#fff, 20%);
+
+// fonts
+$sansSerif:        'Fira Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+// sizing
+$baseMeasure:       16px;
+
+// devices
+$mobile:            680px;
+$mobiles:           'screen and (max-width: #{$mobile})';
+
+// animations
+$globalTransition:  .4s;

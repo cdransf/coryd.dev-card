@@ -1,0 +1,30 @@
+// attention shorthand
+@mixin attention() {
+    &:hover,
+    &:active,
+    &:focus {
+        @content;
+    }
+}
+
+// center elements
+@mixin flexCenter() {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+// full page background
+@mixin fullSizeBackground($url) {
+    background: {
+        image: url($url);
+        color: $backgroundDark;
+        attachment: fixed;
+        position: center center;
+        size: cover;
+        repeat: no-repeat;
+    }
+    position: absolute;
+    overflow: hidden;
+}
