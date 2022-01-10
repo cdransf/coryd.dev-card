@@ -1,0 +1,37 @@
+body.error {
+    @include fullSizeBackground('/background-error.webp');
+    @include flexCenter();
+    width: 100%;
+    height: 100%;
+
+    main {
+        max-width: 45*$baseMeasure;
+        margin: 0 auto;
+
+        section {
+            @include flexCenter();
+
+            color: $white;
+            text-shadow: 0 0 $baseMeasure*.3125 rgba(0,0,0,.5);
+            line-height: 1.25;
+            font: {
+                family: $sansSerif;
+                size: $baseMeasure*2.5;
+                weight: bold;
+            }
+            @media #{$mobiles} {
+                font-size: $baseMeasure*2;
+            }
+
+            a {
+                color: $white;
+                text-decoration: underline;
+                transition: color $globalTransition ease-in-out;
+
+                @include attention() {
+                    color: $color-white-dark;
+                }
+            }
+        }
+    }
+}

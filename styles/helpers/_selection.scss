@@ -1,0 +1,10 @@
+// user selection styles
+::selection {
+    background: $highlight;
+    color: $white;
+}
+
+::-moz-selection {
+    background: $highlight;
+    color: $white;
+}
