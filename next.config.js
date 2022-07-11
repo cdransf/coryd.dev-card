@@ -86,34 +86,11 @@ module.exports = withBundleAnalyzer({
             },
         ]
     },
-    webpack: (config, { dev, isServer }) => {
-        config.module.rules.push({
-            test: /\.(png|jpe?g|gif|mp4)$/i,
-            use: [
-                {
-                    loader: 'file-loader',
-                    options: {
-                        publicPath: '/_next',
-                        name: 'static/media/[name].[hash].[ext]',
-                    },
-                },
-            ],
-        })
-
+    webpack(config) {
         config.module.rules.push({
             test: /\.svg$/,
             use: ['@svgr/webpack'],
         })
-
-        if (!dev && !isServer) {
-            Object.assign(config.resolve.alias, {
-                'react/jsx-runtime.js': 'preact/compat/jsx-runtime',
-                react: 'preact/compat',
-                'react-dom/test-utils': 'preact/test-utils',
-                'react-dom': 'preact/compat',
-            })
-        }
-
         return config
     },
     siteUrl: process.env.SITE_URL || 'https://coryd.dev',

@@ -1,6 +1,6 @@
+/* eslint-disable @next/next/no-img-element */
 import { PageSEO } from '@/components/SEO'
 import Link from '@/components/Link'
-import Image from '@/components/Image'
 import Footer from '@/components/Footer'
 import Reading from '@/components/media/Reading'
 import Listening from '@/components/media/Listening'
@@ -16,7 +16,7 @@ function HomePage() {
             <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
             <section>
                 <div className="home__header">
-                    <Image src="/static/images/avatar.webp" alt="Cory Dransfeldt" height="164" />
+                    <img alt={siteMetadata.title} src="/static/images/avatar.webp" height="164px" />
                     <div className="home__header__tagline">
                         <h1>
                             Hi, I'm Cory
