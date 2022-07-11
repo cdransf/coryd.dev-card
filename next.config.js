@@ -116,6 +116,5 @@ module.exports = withBundleAnalyzer({
 
         return config
     },
-    // eslint-disable-next-line prettier/prettier
     siteUrl: process.env.SITE_URL || 'https://coryd.dev',
 })
