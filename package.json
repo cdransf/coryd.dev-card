@@ -6,7 +6,7 @@
     "license": "",
     "scripts": {
         "dev": "next dev",
-        "build": "next build",
+        "build": "next build && node ./scripts/generate-sitemap",
         "start": "next start",
         "analyze": "cross-env ANALYZE=true next build",
         "lint": "next lint --fix --dir pages --dir components --dir lib --dir layouts --dir scripts",
@@ -26,6 +26,7 @@
     "devDependencies": {
         "@next/bundle-analyzer": "^12.2.2",
         "@types/node": "^18.0.3",
+        "@types/prettier": "^2.6.3",
         "@types/react": "^17.0.14",
         "@types/react-dom": "^18.0.6",
         "@typescript-eslint/eslint-plugin": "^5.30.5",
