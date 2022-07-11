@@ -1,9 +1,10 @@
-import { writeFileSync } from 'fs'
-import globby from 'globby'
-import { resolveConfig, format } from 'prettier'
-import { siteUrl } from '../data/siteMetadata'
+const fs = require('fs')
+const globby = require('globby')
+const prettier = require('prettier')
+const siteMetadata = require('../data/siteMetadata')
+
 ;(async () => {
-    const prettierConfig = await resolveConfig('./.prettierrc.js')
+    const prettierConfig = await prettier.resolveConfig('./.prettierrc.js')
     const pages = await globby([
         'pages/*.js',
         'pages/*.tsx',
@@ -30,7 +31,7 @@ import { siteUrl } from '../data/siteMetadata'
                                 }
                                 return `
                                                 <url>
-                                                        <loc>${siteUrl}${route}</loc>
+                                                        <loc>${siteMetadata.siteUrl}${route}</loc>
                                                 </url>
                                         `
                             })
@@ -38,11 +39,11 @@ import { siteUrl } from '../data/siteMetadata'
                 </urlset>
         `
 
-    const formatted = format(sitemap, {
+    const formatted = prettier.format(sitemap, {
         ...prettierConfig,
         parser: 'html',
     })
 
     // eslint-disable-next-line no-sync
-    writeFileSync('public/sitemap.xml', formatted)
+    fs.writeFileSync('public/sitemap.xml', formatted)
 })()

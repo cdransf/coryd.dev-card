@@ -1,4 +1,4 @@
-@use "sass:math";
+@use 'sass:math';
 
 body.home {
     height: 100%;
@@ -12,27 +12,30 @@ body.home {
 
     main {
         margin: 0 auto;
-        max-width: 45*$baseMeasure;
-        padding: $baseMeasure*2 $baseMeasure;
-        letter-spacing: .025em;
+        max-width: 45 * $baseMeasure;
+        padding: $baseMeasure * 2 $baseMeasure;
+        letter-spacing: 0.025em;
         line-height: 1.5;
         font: {
             family: $sansSerif;
-            size: $baseMeasure*1.5;
+            size: $baseMeasure * 1.5;
         }
 
         @media #{$mobiles} {
-            font-size: $baseMeasure*1.25;
-            padding: $baseMeasure*2;
+            font-size: $baseMeasure * 1.25;
+            padding: $baseMeasure * 2;
         }
 
         .home__header {
             display: flex;
             flex-direction: column;
             margin-bottom: $baseMeasure * 2;
+            align-items: center;
 
             img {
-                margin: 0 auto $baseMeasure;
+                height: $baseMeasure * 10.25;
+                width: $baseMeasure * 6.3125;
+                margin-bottom: $baseMeasure;
             }
 
             &__tagline {
@@ -42,7 +45,7 @@ body.home {
 
                 h1 {
                     font: {
-                        size: $baseMeasure*3;
+                        size: $baseMeasure * 3;
                         weight: bold;
                     }
                     color: $text;
@@ -52,18 +55,17 @@ body.home {
                     }
 
                     @media #{$mobiles} {
-                        font-size: $baseMeasure*2.25;
+                        font-size: $baseMeasure * 2.25;
                     }
 
                     span {
                         animation: wave 2s;
                         animation-delay: 1s;
                         display: inline-block;
-                        padding-left: $baseMeasure*.75;
+                        padding-left: $baseMeasure * 0.75;
                     }
                 }
             }
-
         }
 
         p {
@@ -85,7 +87,6 @@ body.home {
         }
     }
 
-
     .footer--links {
         list-style: none;
         display: flex;
@@ -102,8 +103,8 @@ body.home {
 
         li {
             margin: {
-                top: $baseMeasure*2;
-                right: $baseMeasure*1.75;
+                top: $baseMeasure * 2;
+                right: $baseMeasure * 1.75;
                 bottom: 0;
             }
 
