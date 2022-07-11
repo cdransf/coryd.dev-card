@@ -12,7 +12,7 @@ sublimetext.com
 iTerm
 iterm2.com
 
-Next.js
+next.js
 nextjs.org
 
 Vercel
