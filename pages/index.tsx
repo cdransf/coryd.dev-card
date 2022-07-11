@@ -6,10 +6,6 @@ import Reading from '@/components/media/Reading'
 import Listening from '@/components/media/Listening'
 import siteMetadata from '@/data/siteMetadata'
 
-export async function getStaticProps() {
-    return { props: { containerClass: 'home' } }
-}
-
 function HomePage() {
     return (
         <main role="main">

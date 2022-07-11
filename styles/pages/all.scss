@@ -1,2 +1,147 @@
-@import 'home';
-@import 'error';
+@use 'sass:math';
+
+html,
+body {
+    height: 100%;
+    background: $white;
+    color: $text;
+
+    @media (prefers-color-scheme: dark) {
+        background: $backgroundDark;
+        color: $textDark;
+    }
+
+    main {
+        margin: 0 auto;
+        max-width: 45 * $baseMeasure;
+        padding: $baseMeasure * 2 $baseMeasure;
+        letter-spacing: 0.025em;
+        line-height: 1.5;
+        font: {
+            family: $sansSerif;
+            size: $baseMeasure * 1.5;
+        }
+
+        @media #{$mobiles} {
+            font-size: $baseMeasure * 1.25;
+            padding: $baseMeasure * 2;
+        }
+
+        &.error {
+            margin-top: 50%;
+            text-align: center;
+        }
+
+        .home__header {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: $baseMeasure * 2;
+            align-items: center;
+
+            img {
+                height: $baseMeasure * 10.25;
+                width: $baseMeasure * 6.3125;
+                margin-bottom: $baseMeasure;
+            }
+
+            &__tagline {
+                display: flex;
+                justify-content: center;
+                flex-direction: row;
+
+                h1 {
+                    font: {
+                        size: $baseMeasure * 3;
+                        weight: bold;
+                    }
+                    color: $text;
+
+                    @media (prefers-color-scheme: dark) {
+                        color: $textDark;
+                    }
+
+                    @media #{$mobiles} {
+                        font-size: $baseMeasure * 2.25;
+                    }
+
+                    span {
+                        animation: wave 2s;
+                        animation-delay: 1s;
+                        display: inline-block;
+                        padding-left: $baseMeasure * 0.75;
+                    }
+                }
+            }
+        }
+
+        p {
+            margin: 0 0 $baseMeasure 0;
+        }
+
+        a {
+            color: $highlight;
+            text-decoration: none;
+            transition: color $globalTransition ease-in-out;
+
+            @include attention() {
+                color: darken($highlight, 15%);
+            }
+        }
+
+        strong {
+            font-weight: bold;
+        }
+
+        .icon--dots__loading svg {
+            height: 12px;
+            width: 48px;
+        }
+
+        .icon--dots__loading svg circle {
+            fill: $text;
+
+            @media (prefers-color-scheme: dark) {
+                fill: $textDark;
+            }
+        }
+    }
+
+    .footer--links {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        margin: 0;
+        font: {
+            family: monospace;
+            size: $baseMeasure;
+        }
+
+        @media #{$mobiles} {
+            flex-direction: column;
+        }
+
+        li {
+            margin: {
+                top: $baseMeasure * 2;
+                right: $baseMeasure * 1.75;
+                bottom: 0;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            @media #{$mobiles} {
+                margin: {
+                    top: $baseMeasure;
+                    right: 0;
+                    bottom: 0;
+                }
+
+                &:first-child {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+}
