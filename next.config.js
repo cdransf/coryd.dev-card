@@ -1,6 +1,6 @@
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
     enabled: process.env.ANALYZE === 'true',
-});
+})
 
 const ContentSecurityPolicy = `
     default-src 'self';
@@ -116,5 +116,6 @@ module.exports = withBundleAnalyzer({
 
         return config
     },
-    siteUrl: process.env.SITE_URL || "https://coryd.dev",
-});
+    // eslint-disable-next-line prettier/prettier
+    siteUrl: process.env.SITE_URL || 'https://coryd.dev',
+})
