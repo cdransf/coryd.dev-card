@@ -48,6 +48,12 @@ const CommonSEO = ({
                 rel="canonical"
                 href={canonicalUrl ? canonicalUrl : `${siteMetadata.siteUrl}${router.asPath}`}
             />
+            <meta charSet="utf-8" />
+            <meta content="text/html; charset=utf-8" httpEquiv="Content-Type"></meta>
+            <link rel="icon" type="image/png" sizes="32x32" href={siteMetadata.favicon32} />
+            <link rel="icon" type="image/png" sizes="16x16" href={siteMetadata.favicon16} />
+            <link rel="shortcut icon" href={siteMetadata.favicon} />
+            <link rel="apple-touch-icon" href={siteMetadata.appleTouch}></link>
         </Head>
     )
 }
