@@ -29,11 +29,9 @@ const siteMetadata = require('../data/siteMetadata')
                                 if (page.search('pages/404.') > -1) {
                                     return
                                 }
-                                return `
-                                                <url>
-                                                        <loc>${siteMetadata.siteUrl}${route}</loc>
-                                                </url>
-                                        `
+                                return `<url>
+                                            <loc>${siteMetadata.siteUrl}${route}</loc>
+                                        </url>`
                             })
                             .join('')}
                 </urlset>
