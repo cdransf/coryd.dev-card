@@ -1,7 +1,9 @@
 import { PageSEO } from '@/components/SEO'
-import Footer from '@/components/footer'
-import Reading from '@/components/media/reading'
-import Listening from '@/components/media/listening'
+import Link from '@/components/Link'
+import Image from '@/components/Image'
+import Footer from '@/components/Footer'
+import Reading from '@/components/media/Reading'
+import Listening from '@/components/media/Listening'
 import siteMetadata from '@/data/siteMetadata'
 
 export async function getStaticProps() {
@@ -14,7 +16,7 @@ function HomePage() {
             <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
             <section>
                 <div className="home__header">
-                    <img src="/static/images/avatar.webp" alt="Cory Dransfeldt" height="164" />
+                    <Image src="/static/images/avatar.webp" alt="Cory Dransfeldt" height="164" />
                     <div className="home__header__tagline">
                         <h1>
                             Hi, I'm Cory
@@ -25,26 +27,9 @@ function HomePage() {
                 <p>
                     I'm a software developer in Camarillo, California. I enjoy hanging out with my
                     beautiful family and 4 rescue dogs, technology, automation,{' '}
-                    <a
-                        href="https://www.last.fm/user/cdme_"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        music
-                    </a>
-                    ,{' '}
-                    <a href="https://oku.club/user/cory" target="_blank" rel="noopener noreferrer">
-                        reading
-                    </a>{' '}
-                    and{' '}
-                    <a
-                        href="https://trakt.tv/users/cdransf"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        tv and movies
-                    </a>
-                    .
+                    <Link href="https://www.last.fm/user/cdme_">music</Link>,{' '}
+                    <Link href="https://oku.club/user/cory">reading</Link> and{' '}
+                    <Link href="https://trakt.tv/users/cdransf">tv and movies</Link>.
                 </p>
                 <p>
                     I build, maintain and design web applications. I've been coding professionally

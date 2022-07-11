@@ -44,4 +44,4 @@ const Reading = () => {
     ) : null
 }
 
-export default Reading;
+export default Reading

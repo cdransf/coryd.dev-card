@@ -1,5 +1,6 @@
 import { PageSEO } from '@/components/SEO'
 import siteMetadata from '@/data/siteMetadata'
+import Link from '@/components/Link'
 
 export async function getStaticProps() {
     return { props: { containerClass: 'error' } }
@@ -12,7 +13,7 @@ export default function Custom404() {
             <section>
                 <p>It looks like you got lost.</p>
                 <p>
-                    <a href="/">Why not head home?</a>
+                    <Link href="/">Why not head home?</Link>
                 </p>
             </section>
         </main>

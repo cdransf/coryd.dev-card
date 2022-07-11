@@ -1,4 +1,4 @@
-import '../styles/all.scss';
+import '../styles/all.scss'
 
 export default function MyCard({ Component, pageProps }) {
     return (
