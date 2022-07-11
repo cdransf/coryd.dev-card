@@ -95,6 +95,11 @@ body {
         .icon--dots__loading svg {
             height: $baseMeasure * 1.5;
             width: $baseMeasure * 6;
+
+            @media #{$mobiles} {
+                height: $baseMeasure;
+                width: $baseMeasure * 4;
+            }
         }
 
         .icon--dots__loading svg circle {
