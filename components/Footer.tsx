@@ -22,6 +22,9 @@ const Footer = () => {
                 <li>
                     <Link href="https://oku.club/user/cory">Oku</Link>
                 </li>
+                <li>
+                    <Link href="/uses">Uses</Link>
+                </li>
             </ul>
         </footer>
     )

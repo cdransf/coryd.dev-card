@@ -11,6 +11,43 @@ body {
         color: $textDark;
     }
 
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-weight: bold;
+        margin: {
+            top: $baseMeasure;
+            bottom: $baseMeasure;
+        }
+    }
+
+    h1 {
+        font-size: $baseMeasure * 3;
+    }
+
+    h2 {
+        font-size: $baseMeasure * 2.5;
+    }
+
+    h3 {
+        font-size: $baseMeasure * 2;
+    }
+
+    h4 {
+        font-size: $baseMeasure * 1.75;
+    }
+
+    h5 {
+        font-size: $baseMeasure * 1.5;
+    }
+
+    h6 {
+        font-size: $baseMeasure * 1.25;
+    }
+
     main {
         margin: 0 auto;
         max-width: 45 * $baseMeasure;
@@ -32,6 +69,25 @@ body {
             text-align: center;
         }
 
+        &.uses {
+            ul {
+                padding-left: $baseMeasure * 3;
+
+                li {
+                    list-style: disc;
+                    margin-bottom: $baseMeasure * 0.5;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
+            p {
+                margin-top: $baseMeasure;
+            }
+        }
+
         .home__header {
             display: flex;
             flex-direction: column;
@@ -50,10 +106,6 @@ body {
                 flex-direction: row;
 
                 h1 {
-                    font: {
-                        size: $baseMeasure * 3;
-                        weight: bold;
-                    }
                     color: $text;
 
                     @media (prefers-color-scheme: dark) {
@@ -76,6 +128,10 @@ body {
 
         p {
             margin: 0 0 $baseMeasure 0;
+        }
+
+        .text-small {
+            font-size: $baseMeasure;
         }
 
         a {
