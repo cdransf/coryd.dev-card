@@ -3,7 +3,7 @@ import Link from '@/components/Link'
 const Footer = () => {
     return (
         <footer>
-            <ul className="footer--links">
+            <ul className="footer__links">
                 <li>
                     <Link href="mailto:hi@coryd.dev">Email</Link>
                 </li>

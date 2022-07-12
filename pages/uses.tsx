@@ -10,7 +10,7 @@ export default function Uses() {
                 description={siteMetadata.description}
             />
             <section>
-                <Link className="text-small" href="/">
+                <Link className="text--small" href="/">
                     &#x2190; Back home
                 </Link>
                 <h1>Uses</h1>

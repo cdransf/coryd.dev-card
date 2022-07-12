@@ -129,7 +129,7 @@ body {
             margin-bottom: $baseMeasure;
         }
 
-        .text-small {
+        .text--small {
             font-size: $baseMeasure;
         }
 
@@ -147,7 +147,7 @@ body {
             font-weight: bold;
         }
 
-        .icon--dots__loading svg {
+        .icon-dots--loading svg {
             height: $baseMeasure * 1.5;
             width: $baseMeasure * 6;
 
@@ -157,7 +157,7 @@ body {
             }
         }
 
-        .icon--dots__loading svg circle {
+        .icon-dots--loading svg circle {
             fill: $text;
 
             @media (prefers-color-scheme: dark) {
@@ -166,7 +166,7 @@ body {
         }
     }
 
-    .footer--links {
+    .footer__links {
         list-style: none;
         display: flex;
         flex-direction: row;

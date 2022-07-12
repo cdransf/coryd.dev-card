@@ -32,7 +32,7 @@ const Reading = () => {
 
     if (!response)
         return (
-            <div className="icon--dots__loading">
+            <div className="icon-dots--loading">
                 <ThreeDots />
             </div>
         )
