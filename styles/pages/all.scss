@@ -91,7 +91,6 @@ body {
         .home__header {
             display: flex;
             flex-direction: column;
-            margin-bottom: $baseMeasure * 2;
             align-items: center;
 
             img {
@@ -127,7 +126,7 @@ body {
         }
 
         p {
-            margin: 0 0 $baseMeasure 0;
+            margin-bottom: $baseMeasure;
         }
 
         .text-small {
