@@ -54,6 +54,7 @@ const CommonSEO = ({
             <link rel="icon" type="image/png" sizes="16x16" href={siteMetadata.favicon16} />
             <link rel="shortcut icon" href={siteMetadata.favicon} />
             <link rel="apple-touch-icon" href={siteMetadata.appleTouch}></link>
+            <meta name="theme-color" content="#3da9fc" />
         </Head>
     )
 }
