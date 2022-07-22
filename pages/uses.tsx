@@ -81,7 +81,7 @@ export default function Uses() {
                     <li>
                         <Link href="https://savvycal.com/?r=coryd">SavvyCal</Link> - my favorite
                         scheduling tool. Powerful, flexible and works with iCloud's calendar
-                        calendar seamlessly.
+                        seamlessly.
                     </li>
                     <li>
                         <Link href="https://whereby.com">Whereby</Link> - a robust, easy to use and
@@ -104,7 +104,7 @@ export default function Uses() {
                     <li>
                         <Link href="https://music.apple.com">Apple Music</Link> - primarily as a way
                         to sync music. I import my library and allow Apple to store it rather than
-                        leveraging their cataologue.
+                        leveraging their catalogue.
                     </li>
                     <li>
                         <Link href="http://slack.com">Slack</Link> - my family has a Slack channel
